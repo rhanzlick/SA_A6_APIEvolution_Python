@@ -5,8 +5,8 @@ from pydantic import BaseModel, Field
 from datetime import datetime, timezone
 from uuid import UUID, uuid4
 
-#from transaction import Transaction
-from vehicle import Vehicle
+from transaction import Transaction
+from asset import Asset
 
 def datetime_now() -> datetime:
     return datetime.now(timezone.utc)
@@ -42,7 +42,7 @@ class User(BaseModel):
     '''
 
     @classmethod
-    def Craete() -> bool:
+    def Create() -> bool:
         '''
         Creates a new User object in the database. Returns true if successful, false otherwise.
         '''
@@ -58,24 +58,20 @@ class User(BaseModel):
     @classmethod
     def Delete() -> bool:
         '''
-        Removes the user, all associated Vehicle objects, and all subsequently associated Transactions from the database. Returns true if successful, false otherwise.
+        Removes the user, all associated Asset objects, and all subsequently associated Transactions from the database. Returns true if successful, false otherwise.
         '''
         pass
 
-    @staticmethod
-    def GetVehicles(user_id: UUID, vehicle_id: Union[UUID, List[UUID]]) -> List[Vehicle]:
+    @classmethod
+    def GetAssets(asset_id: Union[UUID, List[UUID]]) -> List[Asset]:
         '''
-        Get all Vehicle objects associated with this user's id.
+        Get all Asset objects associated with this user's id.
         '''
         pass
 
-
-
-# def Main():
-#     u = User()
-#     print(u.id)
-#     print(datetime.datetime.now())
-#     print(sys.path)
-
-#if __name__ == '__main__':
-#    Main()
+    @classmethod
+    def GetUserTransactions(asset_id: Union[UUID, List[UUID]]) -> List[Transaction]:
+        '''
+        Get all transactions associated to this user. Optionally, include one or more asset ids to filter the results.
+        '''
+        pass

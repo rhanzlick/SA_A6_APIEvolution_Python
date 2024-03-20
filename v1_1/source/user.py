@@ -5,8 +5,9 @@ from pydantic import BaseModel, Field
 from datetime import datetime, timezone
 from uuid import UUID, uuid4
 
-#from transaction import Transaction
+from transaction import Transaction
 from vehicle import Vehicle
+from asset import Asset
 
 def datetime_now() -> datetime:
     return datetime.now(timezone.utc)
@@ -42,6 +43,14 @@ class User(BaseModel):
     '''
 
     @classmethod
+    def Create() -> bool:
+        '''
+        Creates a new User object in the database. Returns true if successful, false otherwise.
+        '''
+        pass
+
+    @deprecated(deprecated_in = '1.1', details = 'Replaced with the \'Create\' method.')
+    @classmethod
     def Craete() -> bool:
         '''
         Creates a new User object in the database. Returns true if successful, false otherwise.
@@ -58,14 +67,29 @@ class User(BaseModel):
     @classmethod
     def Delete() -> bool:
         '''
-        Removes the user, all associated Vehicle objects, and all subsequently associated Transactions from the database. Returns true if successful, false otherwise.
+        Removes the user, all associated Vehicle objects, all associated Asset objects, and all subsequently associated Transactions from the database. Returns true if successful, false otherwise.
         '''
         pass
 
+    @classmethod
+    def GetAssets(asset_id: Union[UUID, List[UUID]]) -> List[Asset]:
+        '''
+        Get all Asset objects associated with this user's id.
+        '''
+        pass
+
+    @deprecated(deprecated_in = '1.1', details = 'Use of this method should be omitted in favor of the non-static \'GetAssets\' method. Future versions will use the \'Asset\' class in place of all references to the \'Vehicle\' class.')
     @staticmethod
-    def GetVehicles(user_id: UUID, vehicle_id: Union[UUID, List[UUID]]) -> List[Vehicle]:
+    def GetVehicles(user_id: UUID) -> List[Vehicle]:
         '''
         Get all Vehicle objects associated with this user's id.
+        '''
+        pass
+
+    @classmethod
+    def GetUserTransactions(asset_id: Union[UUID, List[UUID]]) -> List[Transaction]:
+        '''
+        Get all transactions associated to this user. Optionally, include one or more asset ids to filter the results.
         '''
         pass
 

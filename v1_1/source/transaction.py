@@ -19,10 +19,16 @@ class Transaction(BaseModel):
     '''
     A unique Id that describes each transaction.
     '''
-    
+
+    asset_id: UUID = None
+    '''
+    Id of the associated asset. This should be used in lieu of the deprecated \'vehicle_id\' property.
+    '''
+
+    #@deprecated(deprecated_in='1.1', details='Use of this property should be omitted in favor of the \'asset_id\' property.')
     vehicle_id: UUID = None
     '''
-    Id of the vehicle associated to this transaction.
+    Id of the vehicle associated to this transaction. This property is deprecated as of version 1.1, and its use should be avoided in favor of the \'asset_id\' property.
     '''
 
     description: str = None
@@ -48,6 +54,7 @@ class Transaction(BaseModel):
         '''
         pass
     
+    @deprecated(deprecated_in = '1.1', details = 'Use of this class should be omitted. It will be removed in a future version.')
     @staticmethod
     def Get(id: UUID) -> bool:
         '''

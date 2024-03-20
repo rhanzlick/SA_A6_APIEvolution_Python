@@ -7,6 +7,7 @@ from uuid import UUID, uuid4
 
 from transaction import Transaction
 
+@deprecated(deprecated_in = '1.1', details = 'Use of class should be omitted in favor to the new \'Asset\' class.')
 class Vehicle(BaseModel):
     '''
     Defines a type that represents a vehicle through the API.
@@ -61,7 +62,14 @@ class Vehicle(BaseModel):
         '''
         pass
 
+    @classmethod
+    def GetTransactions() -> List[Transaction]:
+        '''
+        Get all transactions associated to this vehicle's id.
+        '''
+        pass
 
+    @deprecated(deprecated_in = '1.1', details = 'Use of this static method should be omitted in favor of the non-static variant with the same name.')
     @staticmethod
     def GetTransactions(vehicle_id: Union[UUID, List[UUID]]) -> List[Transaction]:
         '''

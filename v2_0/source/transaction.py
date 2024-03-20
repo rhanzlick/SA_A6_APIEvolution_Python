@@ -14,15 +14,21 @@ class Transaction(BaseModel):
     '''
     Defines a type that represents a transaction through the API.
     '''
-    #id: uuid = uuid.uuid4()
+    
     id: UUID = Field(default_factory = uuid4)
     '''
     A unique Id that describes each transaction.
     '''
-    
+
+    asset_id: UUID = None
+    '''
+    Id of the associated asset. This should be used in lieu of the deprecated \'vehicle_id\' property.
+    '''
+
+    #@deprecated(deprecated_in='1.1', details='Use of this property should be omitted in favor of the \'asset_id\' property.')
     vehicle_id: UUID = None
     '''
-    Id of the vehicle associated to this transaction.
+    Id of the vehicle associated to this transaction. This property is deprecated as of version 1.1, and its use should be avoided in favor of the \'asset_id\' property.
     '''
 
     description: str = None
@@ -43,13 +49,6 @@ class Transaction(BaseModel):
 
     @classmethod
     def Update() -> bool:
-        '''
-        Update existing transaction. Returns true if successful, false otherwise.
-        '''
-        pass
-    
-    @staticmethod
-    def Get(id: UUID) -> bool:
         '''
         Update existing transaction. Returns true if successful, false otherwise.
         '''
