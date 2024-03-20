@@ -1,0 +1,88 @@
+\doxysection{vehicle.\+Vehicle Class Reference}
+\hypertarget{classvehicle_1_1_vehicle}{}\label{classvehicle_1_1_vehicle}\index{vehicle.Vehicle@{vehicle.Vehicle}}
+Inheritance diagram for vehicle.\+Vehicle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classvehicle_1_1_vehicle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classvehicle_1_1_vehicle_afea8fe465d0205f9a0553bfb2c37853a}{Create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new Vehicle object in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvehicle_1_1_vehicle_a08e7f52db4877d802811f4e8e039c5f0}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update existing Vehicle in the database. \end{DoxyCompactList}\item 
+\Hypertarget{classvehicle_1_1_vehicle_afaac6b1b4025c33fb5c359c9af570bb0}\label{classvehicle_1_1_vehicle_afaac6b1b4025c33fb5c359c9af570bb0} 
+List\mbox{[}\mbox{\hyperlink{classtransaction_1_1_transaction}{Transaction}}\mbox{]} {\bfseries Get\+Transactions} ()
+\begin{DoxyCompactList}\small\item\em Get all transactions associated to this vehicle\textquotesingle{}s id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}\mbox{\hyperlink{classtransaction_1_1_transaction}{Transaction}}\mbox{]} \mbox{\hyperlink{classvehicle_1_1_vehicle_a7c85673274327ec4cb6eae0b3aaed386}{Get\+Transactions}} (Union\mbox{[}UUID, List\mbox{[}UUID\mbox{]}\mbox{]} vehicle\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_a0d66d7d8986ed1fa4dfe3b67416cf63e}\label{classvehicle_1_1_vehicle_a0d66d7d8986ed1fa4dfe3b67416cf63e} 
+UUID {\bfseries id} = Field(default\+\_\+factory = uuid4)
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_aaa0fd0a98d194c2978d67968f69b92cf}\label{classvehicle_1_1_vehicle_aaa0fd0a98d194c2978d67968f69b92cf} 
+UUID {\bfseries owner\+\_\+id} = None
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_af3ce3ce84790899cebe3438b58ea03fa}\label{classvehicle_1_1_vehicle_af3ce3ce84790899cebe3438b58ea03fa} 
+datetime {\bfseries date\+\_\+acquired} = None
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_ae9192708623e4a1b253b08f2e4629e7e}\label{classvehicle_1_1_vehicle_ae9192708623e4a1b253b08f2e4629e7e} 
+str {\bfseries vin} = None
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_a476c2d082ed177e60e954f73aa91b8d6}\label{classvehicle_1_1_vehicle_a476c2d082ed177e60e954f73aa91b8d6} 
+str {\bfseries manufacturer} = None
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_a45de7ab821dffb5c89c564ce00e4a7aa}\label{classvehicle_1_1_vehicle_a45de7ab821dffb5c89c564ce00e4a7aa} 
+str {\bfseries model} = None
+\item 
+\Hypertarget{classvehicle_1_1_vehicle_a7b4433b07dfee85546da7dc9a260ddcd}\label{classvehicle_1_1_vehicle_a7b4433b07dfee85546da7dc9a260ddcd} 
+int {\bfseries year} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000005}{Deprecated}}]Use of class should be omitted in favor to the new \textbackslash{}\textquotesingle{}Asset\textbackslash{}\textquotesingle{} class. Defines a type that represents a vehicle through the API. \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classvehicle_1_1_vehicle_afea8fe465d0205f9a0553bfb2c37853a}\label{classvehicle_1_1_vehicle_afea8fe465d0205f9a0553bfb2c37853a} 
+\index{vehicle.Vehicle@{vehicle.Vehicle}!Create@{Create}}
+\index{Create@{Create}!vehicle.Vehicle@{vehicle.Vehicle}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily  bool vehicle.\+Vehicle.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new Vehicle object in the database. 
+
+Returns true if successful, false otherwise. \Hypertarget{classvehicle_1_1_vehicle_a7c85673274327ec4cb6eae0b3aaed386}\label{classvehicle_1_1_vehicle_a7c85673274327ec4cb6eae0b3aaed386} 
+\index{vehicle.Vehicle@{vehicle.Vehicle}!GetTransactions@{GetTransactions}}
+\index{GetTransactions@{GetTransactions}!vehicle.Vehicle@{vehicle.Vehicle}}
+\doxysubsubsection{\texorpdfstring{GetTransactions()}{GetTransactions()}}
+{\footnotesize\ttfamily  List\mbox{[}\mbox{\hyperlink{classtransaction_1_1_transaction}{Transaction}}\mbox{]} vehicle.\+Vehicle.\+Get\+Transactions (\begin{DoxyParamCaption}\item[{Union\mbox{[}UUID, List\mbox{[}UUID\mbox{]}\mbox{]}}]{vehicle\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000006}{Deprecated}}]Use of this static method should be omitted in favor of the non-\/static variant with the same name. Get all transactions associated to this vehicle\textquotesingle{}s id. \end{DoxyRefDesc}
+\Hypertarget{classvehicle_1_1_vehicle_a08e7f52db4877d802811f4e8e039c5f0}\label{classvehicle_1_1_vehicle_a08e7f52db4877d802811f4e8e039c5f0} 
+\index{vehicle.Vehicle@{vehicle.Vehicle}!Update@{Update}}
+\index{Update@{Update}!vehicle.Vehicle@{vehicle.Vehicle}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily  bool vehicle.\+Vehicle.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update existing Vehicle in the database. 
+
+Returns true if successful, false otherwise. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+UC/\+Spring2024/\+Software\+Architecture/\+Assignment 6/\+A6\+Python/\+A6\+API/v1\+\_\+1/source/vehicle.\+py\end{DoxyCompactItemize}

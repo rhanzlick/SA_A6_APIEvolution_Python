@@ -1,0 +1,23 @@
+\chapter{Deprecated List}
+\hypertarget{deprecated}{}\label{deprecated}\index{Deprecated List@{Deprecated List}}
+
+\begin{DoxyRefList}
+\item[Member \doxylink{classtransaction_1_1_transaction_ad72f42b259ab4a22b77a09ca9c73e3b4}{transaction.Transaction.Get} (UUID id)]\label{deprecated__deprecated000002}%
+\Hypertarget{deprecated__deprecated000002}%
+Use of this static method should be omitted. It will be removed in a future version. Update existing transaction. Returns true if successful, false otherwise.  
+\item[Member \doxylink{classtransaction_1_1_transaction_ad325305c973277d29667703fd9d89b4d}{transaction.Transaction.vehicle\+\_\+id} ]\label{deprecated__deprecated000001}%
+\Hypertarget{deprecated__deprecated000001}%
+This property is deprecated as of version 1.\+1, and its use should be avoided in favor of the \textbackslash{}\textquotesingle{}asset\+\_\+id\textbackslash{}\textquotesingle{} property.  
+\item[Member \doxylink{classuser_1_1_user_a5ab206fc45630c75828f83b30d51c539}{user.User.Craete} ()]\label{deprecated__deprecated000003}%
+\Hypertarget{deprecated__deprecated000003}%
+Replaced with the \textbackslash{}\textquotesingle{}Create\textbackslash{}\textquotesingle{} method. Creates a new \doxylink{classuser_1_1_user}{User} object in the database. Returns true if successful, false otherwise.  
+\item[Member \doxylink{classuser_1_1_user_a368339a4f32a8c5ba82d55b636aecad1}{user.User.Get\+Vehicles} (UUID user\+\_\+id)]\label{deprecated__deprecated000004}%
+\Hypertarget{deprecated__deprecated000004}%
+Use of this method should be omitted in favor of the non-\/static \textbackslash{}\textquotesingle{}Get\+Assets\textbackslash{}\textquotesingle{} method. Future versions will use the \textbackslash{}\textquotesingle{}Asset\textbackslash{}\textquotesingle{} class in place of all references to the \textbackslash{}\textquotesingle{}Vehicle\textbackslash{}\textquotesingle{} class. Get all Vehicle objects associated with this user\textquotesingle{}s id.  
+\item[Class \doxylink{classvehicle_1_1_vehicle}{vehicle.Vehicle} ]\label{deprecated__deprecated000005}%
+\Hypertarget{deprecated__deprecated000005}%
+Use of class should be omitted in favor to the new \textbackslash{}\textquotesingle{}Asset\textbackslash{}\textquotesingle{} class. Defines a type that represents a vehicle through the API.  
+\item[Member \doxylink{classvehicle_1_1_vehicle_a7c85673274327ec4cb6eae0b3aaed386}{vehicle.Vehicle.Get\+Transactions} (Union\mbox{[}UUID, List\mbox{[}UUID\mbox{]}\mbox{]} vehicle\+\_\+id)]\label{deprecated__deprecated000006}%
+\Hypertarget{deprecated__deprecated000006}%
+Use of this static method should be omitted in favor of the non-\/static variant with the same name. Get all transactions associated to this vehicle\textquotesingle{}s id. 
+\end{DoxyRefList}

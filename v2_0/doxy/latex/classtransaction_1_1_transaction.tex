@@ -1,0 +1,94 @@
+\doxysection{transaction.\+Transaction Class Reference}
+\hypertarget{classtransaction_1_1_transaction}{}\label{classtransaction_1_1_transaction}\index{transaction.Transaction@{transaction.Transaction}}
+
+
+Defines a type that represents a transaction through the API.  
+
+
+Inheritance diagram for transaction.\+Transaction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtransaction_1_1_transaction}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtransaction_1_1_transaction_a9803526d61e5b4303bb5cb3cdd99f2fe}{Create}} ()
+\begin{DoxyCompactList}\small\item\em Save transaction in database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtransaction_1_1_transaction_aa2ff3ea95032e20d5a7da95309d94f64}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update existing transaction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtransaction_1_1_transaction_a9ab9fb756b7c5f090bb6b1b087871e67}{Delete}} ()
+\begin{DoxyCompactList}\small\item\em Delete transaction in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtransaction_1_1_transaction_a226f0211fee65501031315aa898837b4}\label{classtransaction_1_1_transaction_a226f0211fee65501031315aa898837b4} 
+UUID {\bfseries id} = Field(default\+\_\+factory = uuid4)
+\item 
+\Hypertarget{classtransaction_1_1_transaction_af127fc8c8c3f6da2e0e004b36ffd68ea}\label{classtransaction_1_1_transaction_af127fc8c8c3f6da2e0e004b36ffd68ea} 
+UUID {\bfseries asset\+\_\+id} = None
+\item 
+UUID \mbox{\hyperlink{classtransaction_1_1_transaction_ad325305c973277d29667703fd9d89b4d}{vehicle\+\_\+id}} = None
+\item 
+\Hypertarget{classtransaction_1_1_transaction_aa99cf00ea9eaa53118c542621bd0bf2e}\label{classtransaction_1_1_transaction_aa99cf00ea9eaa53118c542621bd0bf2e} 
+str {\bfseries description} = None
+\item 
+\Hypertarget{classtransaction_1_1_transaction_a2d114c57339e35a96fe55a460fae8ed7}\label{classtransaction_1_1_transaction_a2d114c57339e35a96fe55a460fae8ed7} 
+float {\bfseries cost} = 0.\+0
+\item 
+\Hypertarget{classtransaction_1_1_transaction_a849c054603193d07f02905078491a32f}\label{classtransaction_1_1_transaction_a849c054603193d07f02905078491a32f} 
+datetime {\bfseries completed\+\_\+date} = Field(default\+\_\+factory = datetime\+\_\+now)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a type that represents a transaction through the API. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtransaction_1_1_transaction_a9803526d61e5b4303bb5cb3cdd99f2fe}\label{classtransaction_1_1_transaction_a9803526d61e5b4303bb5cb3cdd99f2fe} 
+\index{transaction.Transaction@{transaction.Transaction}!Create@{Create}}
+\index{Create@{Create}!transaction.Transaction@{transaction.Transaction}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily  bool transaction.\+Transaction.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Save transaction in database. 
+
+Returns true if successful, false otherwise. \Hypertarget{classtransaction_1_1_transaction_a9ab9fb756b7c5f090bb6b1b087871e67}\label{classtransaction_1_1_transaction_a9ab9fb756b7c5f090bb6b1b087871e67} 
+\index{transaction.Transaction@{transaction.Transaction}!Delete@{Delete}}
+\index{Delete@{Delete}!transaction.Transaction@{transaction.Transaction}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily  bool transaction.\+Transaction.\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Delete transaction in database. 
+
+Returns true if successful, false otherwise. \Hypertarget{classtransaction_1_1_transaction_aa2ff3ea95032e20d5a7da95309d94f64}\label{classtransaction_1_1_transaction_aa2ff3ea95032e20d5a7da95309d94f64} 
+\index{transaction.Transaction@{transaction.Transaction}!Update@{Update}}
+\index{Update@{Update}!transaction.Transaction@{transaction.Transaction}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily  bool transaction.\+Transaction.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update existing transaction. 
+
+Returns true if successful, false otherwise. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classtransaction_1_1_transaction_ad325305c973277d29667703fd9d89b4d}\label{classtransaction_1_1_transaction_ad325305c973277d29667703fd9d89b4d} 
+\index{transaction.Transaction@{transaction.Transaction}!vehicle\_id@{vehicle\_id}}
+\index{vehicle\_id@{vehicle\_id}!transaction.Transaction@{transaction.Transaction}}
+\doxysubsubsection{\texorpdfstring{vehicle\_id}{vehicle\_id}}
+{\footnotesize\ttfamily UUID transaction.\+Transaction.\+vehicle\+\_\+id = None\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]\{This property is deprecated as of version 1.\+1, and its use should be avoided in favor of the \textbackslash{}\textquotesingle{}asset\+\_\+id\textbackslash{}\textquotesingle{} property. The Vehicle class has been removed as of v2.\+0 and replaced with the Asset class.\} \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+UC/\+Spring2024/\+Software\+Architecture/\+Assignment 6/\+A6\+Python/\+A6\+API/v2\+\_\+0/source/transaction.\+py\end{DoxyCompactItemize}

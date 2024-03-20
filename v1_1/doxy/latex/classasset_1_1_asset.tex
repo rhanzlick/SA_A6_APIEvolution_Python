@@ -1,0 +1,75 @@
+\doxysection{asset.\+Asset Class Reference}
+\hypertarget{classasset_1_1_asset}{}\label{classasset_1_1_asset}\index{asset.Asset@{asset.Asset}}
+
+
+Defines a type that represents an Asset through the API.  
+
+
+Inheritance diagram for asset.\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classasset_1_1_asset}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classasset_1_1_asset_a3ccec006a82368c31538bb18d27e2593}{Create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new Asset object in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classasset_1_1_asset_a01f2e83c689ee11c15e90b6eb72392a8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update existing Asset in the database. \end{DoxyCompactList}\item 
+\Hypertarget{classasset_1_1_asset_a27acdf43362c814fab806b2aad34dfe2}\label{classasset_1_1_asset_a27acdf43362c814fab806b2aad34dfe2} 
+List\mbox{[}\mbox{\hyperlink{classtransaction_1_1_transaction}{Transaction}}\mbox{]} {\bfseries Get\+Transactions} ()
+\begin{DoxyCompactList}\small\item\em Get all transactions associated to this Asset\textquotesingle{}s id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classasset_1_1_asset_a5d3b7cdc094f6f5e340e7b43958673cb}\label{classasset_1_1_asset_a5d3b7cdc094f6f5e340e7b43958673cb} 
+UUID {\bfseries id} = Field(default\+\_\+factory = uuid4)
+\item 
+\Hypertarget{classasset_1_1_asset_a106afe4ec6f5bb33a9df451d3b12d4ce}\label{classasset_1_1_asset_a106afe4ec6f5bb33a9df451d3b12d4ce} 
+UUID {\bfseries owner\+\_\+id} = None
+\item 
+\Hypertarget{classasset_1_1_asset_afbe1f60f5e7d4945f813844a56e3d491}\label{classasset_1_1_asset_afbe1f60f5e7d4945f813844a56e3d491} 
+str {\bfseries asset\+\_\+description} = \textquotesingle{}\textquotesingle{}
+\item 
+\Hypertarget{classasset_1_1_asset_af00fcd639d4e5a6b914d067e7cf4d8d3}\label{classasset_1_1_asset_af00fcd639d4e5a6b914d067e7cf4d8d3} 
+str {\bfseries asset\+\_\+type} = \textquotesingle{}\textquotesingle{}
+\item 
+\Hypertarget{classasset_1_1_asset_ab22091339f5b2ee42934940ec089b4bd}\label{classasset_1_1_asset_ab22091339f5b2ee42934940ec089b4bd} 
+datetime {\bfseries date\+\_\+acquired} = None
+\item 
+\Hypertarget{classasset_1_1_asset_a863c5b4183bd01b38b2c633924bb2cea}\label{classasset_1_1_asset_a863c5b4183bd01b38b2c633924bb2cea} 
+dict {\bfseries features} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a type that represents an Asset through the API. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classasset_1_1_asset_a3ccec006a82368c31538bb18d27e2593}\label{classasset_1_1_asset_a3ccec006a82368c31538bb18d27e2593} 
+\index{asset.Asset@{asset.Asset}!Create@{Create}}
+\index{Create@{Create}!asset.Asset@{asset.Asset}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily  bool asset.\+Asset.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new Asset object in the database. 
+
+Returns true if successful, false otherwise. \Hypertarget{classasset_1_1_asset_a01f2e83c689ee11c15e90b6eb72392a8}\label{classasset_1_1_asset_a01f2e83c689ee11c15e90b6eb72392a8} 
+\index{asset.Asset@{asset.Asset}!Update@{Update}}
+\index{Update@{Update}!asset.Asset@{asset.Asset}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily  bool asset.\+Asset.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update existing Asset in the database. 
+
+Returns true if successful, false otherwise. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+UC/\+Spring2024/\+Software\+Architecture/\+Assignment 6/\+A6\+Python/\+A6\+API/v1\+\_\+1/source/asset.\+py\end{DoxyCompactItemize}

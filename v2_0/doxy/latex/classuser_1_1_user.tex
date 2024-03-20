@@ -1,0 +1,96 @@
+\doxysection{user.\+User Class Reference}
+\hypertarget{classuser_1_1_user}{}\label{classuser_1_1_user}\index{user.User@{user.User}}
+
+
+Defines a type that represents a user through the API.  
+
+
+Inheritance diagram for user.\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classuser_1_1_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classuser_1_1_user_a761bbaa9c14d5e866f6c4aad20e9ea63}{Create}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new User object in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classuser_1_1_user_a85992efd91864884432f54844410b92a}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates an existing User object in the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classuser_1_1_user_a6e4e97019fd89aadb5c2f3e66f487b56}{Delete}} ()
+\begin{DoxyCompactList}\small\item\em Removes the user, all associated Asset objects, and all subsequently associated Transactions from the database. \end{DoxyCompactList}\item 
+\Hypertarget{classuser_1_1_user_aa5545cf0763b36c286d05ff2589320f0}\label{classuser_1_1_user_aa5545cf0763b36c286d05ff2589320f0} 
+List\mbox{[}\mbox{\hyperlink{classasset_1_1_asset}{Asset}}\mbox{]} {\bfseries Get\+Assets} (Union\mbox{[}UUID, List\mbox{[}UUID\mbox{]}\mbox{]} asset\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get all Asset objects associated with this user\textquotesingle{}s id. \end{DoxyCompactList}\item 
+List\mbox{[}\mbox{\hyperlink{classtransaction_1_1_transaction}{Transaction}}\mbox{]} \mbox{\hyperlink{classuser_1_1_user_a694818698b996a8174fd960f1e468684}{Get\+User\+Transactions}} (Union\mbox{[}UUID, List\mbox{[}UUID\mbox{]}\mbox{]} asset\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get all transactions associated to this user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classuser_1_1_user_a4fe67a6b23893ee539e7dc7a4dbda574}\label{classuser_1_1_user_a4fe67a6b23893ee539e7dc7a4dbda574} 
+UUID {\bfseries id} = Field(default\+\_\+factory = uuid4)
+\item 
+\Hypertarget{classuser_1_1_user_a83d234b4d4392fb220b01ba03d983bce}\label{classuser_1_1_user_a83d234b4d4392fb220b01ba03d983bce} 
+str {\bfseries username} = None
+\item 
+\Hypertarget{classuser_1_1_user_ac3c0f479a2a829a5bf33875105187fbd}\label{classuser_1_1_user_ac3c0f479a2a829a5bf33875105187fbd} 
+str {\bfseries email} = None
+\item 
+\Hypertarget{classuser_1_1_user_a13d6a40ff300361f442e8e0eebe54764}\label{classuser_1_1_user_a13d6a40ff300361f442e8e0eebe54764} 
+datetime {\bfseries created\+\_\+date} = None
+\item 
+\Hypertarget{classuser_1_1_user_adb242c1e79d7b334be57a0faf02e416d}\label{classuser_1_1_user_adb242c1e79d7b334be57a0faf02e416d} 
+datetime {\bfseries last\+\_\+login} = Field(default\+\_\+factory = datetime\+\_\+now)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a type that represents a user through the API. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classuser_1_1_user_a761bbaa9c14d5e866f6c4aad20e9ea63}\label{classuser_1_1_user_a761bbaa9c14d5e866f6c4aad20e9ea63} 
+\index{user.User@{user.User}!Create@{Create}}
+\index{Create@{Create}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily  bool user.\+User.\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new User object in the database. 
+
+Returns true if successful, false otherwise. \Hypertarget{classuser_1_1_user_a6e4e97019fd89aadb5c2f3e66f487b56}\label{classuser_1_1_user_a6e4e97019fd89aadb5c2f3e66f487b56} 
+\index{user.User@{user.User}!Delete@{Delete}}
+\index{Delete@{Delete}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily  bool user.\+User.\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the user, all associated Asset objects, and all subsequently associated Transactions from the database. 
+
+Returns true if successful, false otherwise. \Hypertarget{classuser_1_1_user_a694818698b996a8174fd960f1e468684}\label{classuser_1_1_user_a694818698b996a8174fd960f1e468684} 
+\index{user.User@{user.User}!GetUserTransactions@{GetUserTransactions}}
+\index{GetUserTransactions@{GetUserTransactions}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{GetUserTransactions()}{GetUserTransactions()}}
+{\footnotesize\ttfamily  List\mbox{[}\mbox{\hyperlink{classtransaction_1_1_transaction}{Transaction}}\mbox{]} user.\+User.\+Get\+User\+Transactions (\begin{DoxyParamCaption}\item[{Union\mbox{[}UUID, List\mbox{[}UUID\mbox{]}\mbox{]}}]{asset\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get all transactions associated to this user. 
+
+Optionally, include one or more asset ids to filter the results. \Hypertarget{classuser_1_1_user_a85992efd91864884432f54844410b92a}\label{classuser_1_1_user_a85992efd91864884432f54844410b92a} 
+\index{user.User@{user.User}!Update@{Update}}
+\index{Update@{Update}!user.User@{user.User}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily  bool user.\+User.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates an existing User object in the database. 
+
+Returns true if successful, false otherwise. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+UC/\+Spring2024/\+Software\+Architecture/\+Assignment 6/\+A6\+Python/\+A6\+API/v2\+\_\+0/source/user.\+py\end{DoxyCompactItemize}
